@@ -9,11 +9,11 @@ type PriceProp = {
 const PriceCard = ({pricing: {price, name, description, features, isMostPopular}}: PriceProp) => {
   return (
     <motion.div 
-        initial={{opacity: 0, y: 100}}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ scaleY: 0.9, y: 140}}
+        whileInView={{scaleY: 1,  y: 0 }}
         transition={{
-            opacity : {delay: 0, duration: 0.5},
-            y : {delay: 0, duration: 0.3}
+            scaleY: {duration: 0.2},
+            y : {delay: 0, duration: 0.2}
         }}
         className={`${isMostPopular ? 'popular' : 'not-popular' } bg-white rounded-3xl p-8 w-full md:w-[350px] border border-light-border hover:scale-105 transition-all duration-300 ease-linear relative`}>
         {isMostPopular && <span className='absolute right-6 top-3 bg-blue-light-primary text-blue-primary py-[5px] px-4 rounded-2xl text-sm font-semibold'>Popular</span> }

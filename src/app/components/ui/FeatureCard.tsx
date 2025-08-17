@@ -9,10 +9,10 @@ type FeatureProp = {
 const FeatureCard = ({ feature }: FeatureProp) => {
   return (
     <motion.div 
-      initial={{opacity: 0, y: 100}}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ scaleX: 0.9, y: 100}}
+      whileInView={{scaleX: 1,  y: 0 }}
       transition={{
-        opacity : {delay: 0, duration: 0.5},
+        scaleX: {duration: 0.3},
         y : {delay: 0, duration: 0.3}
       }}
       className='w-full md:w-[360px] h-[200px] hover:scale-105 transition-all ease-linear font-inter p-8 bg-white rounded-2xl'
