@@ -15,7 +15,7 @@ const FeatureCard = ({ feature }: FeatureProp) => {
         opacity : {delay: 0, duration: 0.5},
         y : {delay: 0, duration: 0.3}
       }}
-      className='w-full md:w-[360px] h-[200px] font-inter p-8 bg-white rounded-2xl'
+      className='w-full md:w-[360px] h-[200px] hover:scale-105 transition-all ease-linear font-inter p-8 bg-white rounded-2xl'
     >
         <div className='w-10 h-10 bg-blue-light-primary text-blue-primary flex justify-center items-center rounded-[50%]'>{feature.icon}</div>
         <h1 className='font-bold text-lg text-text-dark mb-2 mt-4'>{feature.heading}</h1>
